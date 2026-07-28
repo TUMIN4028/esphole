@@ -1,0 +1,36 @@
+name: CI
+
+# Los módulos de lógica pura se testean SIN hardware (Unity + ASan/UBSan) y el
+# firmware se compila para ESP32-S3. Ambos corren dentro de la imagen oficial de
+# ESP-IDF v6.0.1 (Unity y el toolchain vienen en ella).
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  host-tests:
+    name: Host tests (pure modules · ASan/UBSan)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Unity host tests
+        uses: espressif/esp-idf-ci-action@v1
+        with:
+          esp_idf_version: v6.0.1
+          path: '.'
+          command: './test/host/run.sh'
+
+  firmware-build:
+    name: Firmware build (ESP32-S3)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: idf.py build
+        uses: espressif/esp-idf-ci-action@v1
+        with:
+          esp_idf_version: v6.0.1
+          target: esp32s3
+          path: 'firmware'

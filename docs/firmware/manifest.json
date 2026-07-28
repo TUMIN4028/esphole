@@ -1,0 +1,15 @@
+{
+  "name": "ESPHole",
+  "version": "1.0.0",
+  "funding_url": "https://github.com/aguilerasmiguel/esphole",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        { "path": "esphole-app-esp32s3.bin", "offset": 0 },
+        { "path": "esphole-www-esp32s3.bin", "offset": 10616832 }
+      ]
+    }
+  ]
+}
