@@ -1,18 +1,18 @@
 # 🕳️ ESPHole
 
-[![CI](https://github.com/aguilerasmiguel/esphole/actions/workflows/ci.yml/badge.svg)](https://github.com/aguilerasmiguel/esphole/actions/workflows/ci.yml)
+[![CI](https://tumin4028.github.io)](https://tumin4028.github.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-39ff14)](LICENSE)
-[![Platform: ESP32-S3](https://img.shields.io/badge/Platform-ESP32--S3-22d3ee)](https://www.espressif.com/en/products/socs/esp32-s3)
-[![ESP-IDF v6.0.1](https://img.shields.io/badge/ESP--IDF-v6.0.1-E7352C?logo=espressif&logoColor=white)](https://github.com/espressif/esp-idf)
+[![Platform: ESP32-S3](https://img.shields.io/badge/Platform-ESP32--S3-22d3ee)](https://tumin4028.github.io)
+[![ESP-IDF v6.0.1](https://img.shields.io/badge/ESP--IDF-v6.0.1-E7352C?logo=espressif&logoColor=white)](https://tumin4028.github.io)
 [![Language: C11](https://img.shields.io/badge/C-11-00599C?logo=c&logoColor=white)](#)
-[![Live page](https://img.shields.io/badge/Live-GitHub_Pages-ff2e97)](https://aguilerasmiguel.github.io/esphole/)
+[![Live page](https://img.shields.io/badge/Live-GitHub_Pages-ff2e97)](https://tumin4028.github.io)
 
 A Pi-hole–style **DNS sinkhole** (network-wide ad & tracker blocker) ported to the
 **ESP32-S3**. Every DNS query on your LAN passes through it: blocklisted domains die with a
 black-hole answer (`0.0.0.0` / `::`), everything else is forwarded to an upstream resolver and
 cached — and above all, **the network never loses DNS** even if blocking fails (fail-open).
 
-**🌐 Live page & docs:** https://aguilerasmiguel.github.io/esphole/
+**🌐 Live page & docs:** https://tumin4028.github.io
 
 ![ESPHole dashboard — the sinkhole ring (block rate), colored stat tiles, upstream health and side navigation, in the neon dark theme](docs/img/dashboard.png)
 
@@ -78,9 +78,9 @@ match). It is **bounded, and the bound is observable** — not a "millions of do
 ### Build & flash
 
 > **No toolchain?** Flash a prebuilt image straight from the browser (Web Serial) on the
-> [**live page**](https://aguilerasmiguel.github.io/esphole/#install) — desktop Chrome/Edge, no
+> [**live page**](https://tumin4028.github.io) — desktop Chrome/Edge, no
 > ESP-IDF needed — or grab the merged binary from
-> [Releases](https://github.com/aguilerasmiguel/esphole/releases) and
+> [Releases](https://tumin4028.github.io) and
 > `esptool write-flash 0x0 esphole-factory-esp32s3.bin`. To build from source instead:
 
 ```sh
@@ -223,9 +223,9 @@ un servidor de "millones de dominios":
 ### Compilar y flashear
 
 > **¿Sin toolchain?** Flashea una imagen precompilada directamente desde el navegador (Web Serial)
-> en la [**web en vivo**](https://aguilerasmiguel.github.io/esphole/#install) — Chrome/Edge de
+> en la [**web en vivo**](https://tumin4028.github.io) — Chrome/Edge de
 > escritorio, sin ESP-IDF — o descarga el binario combinado de
-> [Releases](https://github.com/aguilerasmiguel/esphole/releases) y
+> [Releases](https://tumin4028.github.io) y
 > `esptool write-flash 0x0 esphole-factory-esp32s3.bin`. Para compilar desde el código:
 
 ```sh
